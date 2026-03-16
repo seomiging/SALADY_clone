@@ -1,0 +1,23 @@
+footer{
+  display: grid;
+  align-items: center;
+  place-content: center;
+  background-color: #222222;
+  height: 90px;
+  color: #b3b3b3;
+}
+.footer_1{
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  padding: 3px;
+  letter-spacing:-1px;
+}
+.footer_cop{
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  padding: 3px;
+  gap: 16px;
+  letter-spacing:-1px;
+}
