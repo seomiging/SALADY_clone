@@ -3,7 +3,7 @@ import "../css/brand.css";
 const Brand = () => {
   return (
     <div>
-      <div className="brand_info">
+      <div className="title_info">
         <h2>샐러디</h2>
         <h2>─</h2>
       </div>

@@ -1,0 +1,13 @@
+.menulist{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+.menu_name span{
+  background-color: green;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 20px;
+  font-size: 10px;
+  margin-left: 4px;
+}

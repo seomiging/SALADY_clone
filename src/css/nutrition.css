@@ -1,0 +1,41 @@
+.banner_box{
+  display: grid;
+  gap: 16px
+  ;
+}
+.banner1{
+  max-width: 1920px;
+  width: 100%;
+  height: 500px;
+  background-image: url(/nutrition/banner1.png);
+  background-size: cover ;
+}
+.banner2{
+    max-width: 1920px;
+  width: 100%;
+    height: 500px;
+  background-image: url(/nutrition/banner2.png);
+    background-size: cover ;
+}
+.banner3{
+    max-width: 1920px;
+  width: 100%;
+    height: 500px;
+  background-image: url(/nutrition/banner3.png);
+    background-size: cover ;
+}
+.guide{
+  margin-bottom: 100px;
+}
+.guide_line{
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 12px;
+ margin: 0 auto;
+}
+
+.guide_box{
+  border: 1px solid #ddd;
+  padding: 55px 10px;
+}
