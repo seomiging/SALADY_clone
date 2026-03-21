@@ -3,36 +3,40 @@ a{
 }
 header{
   width: 100%;
-  height: 100px;
+  height: 90px;
   display: flex;
   justify-content: center;
   box-shadow: 0 3px 2px rgba(128, 128, 128, 0.45);
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 200;
 }
 .home_logo{
   display: flex;
   align-items: center;
-  width: 78px;
+  width: 72px;
   margin-left: 78px;
 }
 .header_inner{
-width: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-ul{
-  font-size: 22px;
+.header_nav ul{
+  font-size: 20px;
   font-weight: 500;
   display: flex;
   justify-content: center;
   list-style: none;
-  gap:56px;
+  gap: 50px;
   padding: 30px;
   text-decoration: none;
   margin-left: 4%;
+  white-space: nowrap;
 }
-li{
+.header_nav ul li{
   color: inherit;
   color: #333333;
 }
@@ -45,7 +49,6 @@ li{
   align-items: center;
   font-size: 14px;
   margin-right: 60px;
-  
 }
 .language_box p{
   margin-right: 8px;
@@ -54,12 +57,173 @@ li{
   font-size: 10px;
 }
 .language_img{
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
+  width: 22px;
+  height: 22px;
+  margin-right: 5px;
 }
 .hbg_btn{
   margin-left: 20px;
   width: 56px;
   height: 42px;
+}
+
+/* 햄버거 버튼 */
+.hbg_btn_wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  width: 42px;
+  height: 42px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 20px;
+  padding: 4px;
+}
+.hbg_line {
+  display: block;
+  width: 28px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+.logo_mobile       { display: none; }
+.language_box_left { display: none; }
+
+.drawer_overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 300;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.32s;
+}
+.drawer_overlay.is_open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 100vh;
+  background: #fff;
+  z-index: 400;
+  transform: translateX(100%);
+  transition: transform 0.34s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.drawer.is_open {
+  transform: translateX(0);
+}
+.drawer_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px 20px;
+}
+.drawer_lang {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: #333;
+  cursor: pointer;
+}
+.drawer_lang p {
+  margin-right: 8px;
+}
+.drawer_close_btn {
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: #b3b3b3;
+  cursor: pointer;
+  padding: 4px 8px;
+  line-height: 1;
+}
+.drawer_nav ul {
+  list-style: none;
+  padding: 0px 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+  font-weight: 500;
+  gap: 0;
+  line-height: 14px;
+  
+}
+.drawer_nav li {
+  color: #333333;
+}
+.drawer_nav li a,
+.drawer_nav li span {
+  display: block;
+  padding: 18px 32px;
+  color: #333;
+  cursor: pointer;
+}
+
+/* 반응형 1300px */
+@media (max-width: 1300px) {
+  header{
+    height: 72px;
+  }
+  .header_inner {
+    position: relative;
+    padding: 0 16px;
+  }
+  .logo_desktop { display: none; }
+
+  .logo_mobile {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .logo_mobile img{
+    width: 50px;
+  }
+  .logo_mobile .home_logo {
+    margin-left: 0;
+  }
+
+  .language_box_left {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+  .language_box_left p { margin-right: 8px; }
+  .language_box .language_img,
+  .language_box > p,
+  .language_box > .triangle { display: none; }
+  .language_box { margin-right: 28px; }
+
+  .header_nav { display: none; }
+  .hbg_btn_wrap span{
+    margin-left: 72px;
+  }
+  .drawer{width: 70%;}
+   .drawer_nav ul {
+    font-size: 20px;
+  }
+}
+
+/* 반응형 750px */
+@media (max-width: 750px) {
+  header { height: 56px; }
+  .home_logo { width: 48px; }
+
+  .header_inner { padding: 0 16px; }
+  .drawer_nav ul {
+    font-size: 18px;
+  }
 }

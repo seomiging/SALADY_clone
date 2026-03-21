@@ -3,7 +3,7 @@ import '../css/menu.css'
 
 let menus =[
   {id:1,name:'스파이시 쉬림프 샌드위치', text:'Spicy Shrimp Sandwich', category:['새로운 메뉴','랩&샌드위치'],tag:['NEW'],img:'/menu/1.png'},
-  {id:2,name:'불고기 반미 샌드위치', text:'Bulgogi Banh mi Sandwich', category:['새로운 메뉴','베스트 메뉴','랩&샌드위치'],tag:['NEW'],img:'/menu/2.png'},
+  {id:2,name:'불고기 반미 샌드위치', text:'Bulgogi Banh mi Sandwich', category:['새로운 메뉴','베스트 메뉴','랩&샌드위치'],tag:['NEW','BEST'],img:'/menu/2.png'},
 
   
   {id:3,name:'클래식 치킨 샌드위치', text:'Classic Chicken Sandwich', category:['베스트 메뉴','랩&샌드위치'],tag:['BEST'],img:'/menu/3.png'},
@@ -72,25 +72,29 @@ const tagColors = {
 }
 
 const Menu = () => {
-const [activeCategory, SetActiveCategory]= useState(null)
-const filterMenus = activeCategory === 'ALL'
-? menus
-: menus.filter(menu => menu.category.includes(activeCategory))
+  const [activeCategory, SetActiveCategory] = useState(null)
 
-const MenuCard =(menu) =>(
-  <li key={menu.id} className='menu_name'>
-     <img src={`/SALADY_clone${menu.img}`} alt={menu.name}/>
-      <p>{menu.name}</p>
-      <p>{menu.text}</p>
-      {menu.tag.map(t => t && <span key={t} style={{backgroundColor : tagColors[t]}}>{t}</span>)}
-  </li>
-)
-   return (
+  const MenuCard = (menu) => (
+    <li key={menu.id} className='menu_name'>
+      <img src={`/SALADY_clone${menu.img}`} alt={menu.name} className='menuimg'/>
+      <p className='menuname'>{menu.name}</p>
+      <div className='menubox'>
+        <p>{menu.text}</p>
+        {menu.tag.map(t => t && <span key={t} style={{backgroundColor: tagColors[t]}}>{t}</span>)}
+      </div>
+    </li>
+  )
+
+  return (
     <section>
-       <ul>
+      {/* 카테고리 탭 바 */}
+      <ul className='menu_tab_bar'>
         {categories.map(category => (
-          <li key={category} onClick={() => SetActiveCategory(category)}
-            className={activeCategory === category ? 'active' : ''}>
+          <li
+            key={category}
+            onClick={() => SetActiveCategory(prev => prev === category ? null : category)}
+            className={activeCategory === category ? 'active' : ''}
+          >
             {category}
           </li>
         ))}
@@ -98,8 +102,8 @@ const MenuCard =(menu) =>(
 
       {activeCategory === null
         ? displayCategories.map(cat => (
-            <div key={cat}>
-              <h2>{cat}</h2>
+            <div key={cat} >
+              <h2 className='menucategory'>{cat}</h2>
               <ul className='menulist'>
                 {menus.filter(menu => menu.category.includes(cat)).map(menu => MenuCard(menu))}
               </ul>
