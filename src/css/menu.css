@@ -44,13 +44,21 @@
 .menu_tab_bar {
   display: flex;
   width: fit-content;
+  max-width: 100%;
 
-  margin: 0 auto 60px;
+  margin: 100px auto 60px;
   border: 1px solid #ddd;
-  margin-top: 100px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.menu_tab_bar::-webkit-scrollbar {
+  display: none;
 }
  
 .menu_tab_bar li {
+  flex: 0 0 auto;
   padding: 16px 70px;
   font-size: 12px;
   font-weight: 400;
@@ -83,8 +91,8 @@
     font-size: 16px;
   }
   .menu_tab_bar li {
-    font-size: 15px;
-    padding: 16px 6px;
+    font-size: 13px;
+    padding: 16px 30px;
   }
 
 }
@@ -92,17 +100,7 @@
   .menuimg{
     max-width: 320px;
   }
-  .menu_tab_bar {
-    overflow-x: auto;
-    justify-content: flex-start;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-  }
-  .menu_tab_bar::-webkit-scrollbar {
-    display: none;
-  }
   .menu_tab_bar li {
-    flex: 0 0 auto;
     font-size: 14px;
     padding: 14px 16px;
   }

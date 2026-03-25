@@ -56,7 +56,7 @@ let menus =[
   {id:38,name:'바질치킨 랩', text:'Basil Chicken Wrap', category:['랩&샌드위치'],tag:[''],img:'/menu/39.png'},
 
   {id:39,name:'채소볼', text:'Salady', category:['나만의 샐러디'],tag:['VEGAN'],img:'/menu/40.png'},
-  {id:40,name:'포케볼', text:'Poke BOwl', category:['나만의 샐러디'],tag:[''],img:'/menu/41.png'},
+  {id:40,name:'포케볼', text:'Poke Bowl', category:['나만의 샐러디'],tag:[''],img:'/menu/41.png'},
   {id:41,name:'메밀면볼', text:'BuckWheat Noodle Bowl', category:['나만의 샐러디'],tag:[''],img:'/menu/42.png'},
   {id:42,name:'파스타볼', text:'Pasta Bowl', category:['나만의 샐러디'],tag:[''],img:'/menu/43.png'},
 ]

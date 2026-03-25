@@ -7,7 +7,7 @@ const Brand = () => {
         <h2>샐러디</h2>
         <h2>─</h2>
       </div>
-        <img src="./brand/brand_top_img.jpg" alt="brand_top_img" className="brand_top_img"/>
+       <div className="brandimg_box"><img src="./brand/brand_top_img.jpg" alt="brand_top_img" className="brand_top_img"/></div> 
       <div className="brand_textbox">
         <h3>미션</h3>
         <h4>음식을 통해 사람들의 삶을 즐겁고 건강하게 만듭니다.</h4>

@@ -10,11 +10,16 @@
   margin-bottom: 14px;
   color: #333;
 }
+.brandimg_box{
+  display: flex;
+  justify-content: center;
+}
 .brand_top_img{
   max-width: 1920px;
   width: 100%;
   margin-bottom: 48px;
 }
+
 .brand_textbox{
   max-width: 1200px;
   width: 100%;

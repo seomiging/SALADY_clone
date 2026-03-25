@@ -6,7 +6,6 @@ import Home from './page/Home'
 import Brand from './page/Brand'
 import Menu from './page/Menu'
 import Nutrition from './page/Nutrition'
-import Application from './page/Application'
 import Footer from './Footer'
 
 const App = () => {
@@ -18,7 +17,6 @@ const App = () => {
         <Route path='/brand' element={<Brand/>}/>
         <Route path='/menu' element={<Menu/>}/>
         <Route path='/nutrition' element={<Nutrition/>}/>
-        <Route path='/application/*' element={<Application/>}/>
       </Routes>
       <Footer/>
     </div>

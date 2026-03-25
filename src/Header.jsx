@@ -42,7 +42,7 @@ const Header = () => {
               <li className='header_li_brand'><Link to={"/brand"}>브랜드</Link></li>
               <li><Link to={"/menu"}>메뉴</Link></li>
               <li><Link to={"/nutrition"}>영양 정보</Link></li>
-              <li><Link to={"/application"}>APP</Link></li>
+              <li>APP</li>
               <li>매장</li>
               <li>프랜차이즈</li>
               <li>새소식</li>
@@ -83,7 +83,7 @@ const Header = () => {
             <li><Link to={"/brand"} onClick={handle_close}>브랜드</Link></li>
             <li><Link to={"/menu"} onClick={handle_close}>메뉴</Link></li>
             <li><Link to={"/nutrition"} onClick={handle_close}>영양 정보</Link></li>
-            <li><Link to={"/application"} onClick={handle_close}>APP</Link></li>
+            <li><span>APP</span></li>
             <li><span>매장</span></li>
             <li><span>프랜차이즈</span></li>
             <li><span>새소식</span></li>
