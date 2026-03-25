@@ -52,7 +52,7 @@ let menus =[
   {id:34,name:'그라브락스 연어 랩', text:'Gravlax Salmon Wrap', category:['랩&샌드위치'],tag:[''],img:'/menu/35.png'},
   {id:35,name:'시저치킨 랩', text:'Ceasar Chicken Wrap', category:['랩&샌드위치'],tag:['NEW'],img:'/menu/36.png'},
   {id:36,name:'로스트닭다리살 랩', text:'Roast Chicken Thigh Wrap', category:['랩&샌드위치'],tag:[''],img:'/menu/37.png'},
-  {id:37,name:'에그마요 랩', text:'Egg May Wrap', category:['랩&샌드위치'],tag:[''],img:'/menu/38.png'},
+  {id:37,name:'에그마요 랩', text:'Egg Mayo Wrap', category:['랩&샌드위치'],tag:[''],img:'/menu/38.png'},
   {id:38,name:'바질치킨 랩', text:'Basil Chicken Wrap', category:['랩&샌드위치'],tag:[''],img:'/menu/39.png'},
 
   {id:39,name:'채소볼', text:'Salady', category:['나만의 샐러디'],tag:['VEGAN'],img:'/menu/40.png'},
